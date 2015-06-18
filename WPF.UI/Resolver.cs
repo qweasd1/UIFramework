@@ -72,6 +72,11 @@ namespace WPF.UI
             
             foreach (var prop in properties)
             {
+                if (!prop.CustomAttributes.OfType<RequireAttribute>().Any())
+                {
+                    continue;
+                }
+
                 var propMeta = new PropertyMeta();
                 propMeta.PropertyType = PropertyType.Property;
                 propMeta.PropertyInfo = prop;
@@ -179,7 +184,7 @@ namespace WPF.UI
         }
 
         public void RegisterUIService<TUIService, TView>()
-            where TUIService:IUIService
+            where TUIService:IService
         {
 
         }
@@ -193,7 +198,7 @@ namespace WPF.UI
 
 
         public Window ResolveWindow<TService>()
-            where TService:IUIService
+            where TService:IService
         {
             throw new NotSupportedException();
         }

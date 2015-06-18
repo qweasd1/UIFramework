@@ -1,8 +1,8 @@
-﻿<Window x:Class="WPF.UI.MainWindow"
+﻿<Window x:Class="WPF.UI.Test.SimpleShell"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="SimpleShell" Height="300" Width="300">
+    <Grid x:Name="gd_contentContainer">
         
     </Grid>
 </Window>

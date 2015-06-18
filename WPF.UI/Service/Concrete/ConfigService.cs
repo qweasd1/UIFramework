@@ -8,7 +8,7 @@ using WPF.UI.ViewModel;
 
 namespace WPF.UI
 {
-    public class ConfigService:UIServiceBase
+    public class ConfigService:ServiceBase
     {
         [RequireAttribute]
         private Grid _grid;

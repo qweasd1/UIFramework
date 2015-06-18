@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using WPF.ServiceUI;
+using WPF.UI.Test;
 
 namespace WPF.UI
 {
@@ -12,5 +14,15 @@ namespace WPF.UI
     /// </summary>
     public partial class App : Application
     {
+        
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            
+            Resolver resolver = new Resolver();
+            var shellService = resolver.Resolve<ShellService, SimpleShell>();
+            
+            
+        }
     }
 }

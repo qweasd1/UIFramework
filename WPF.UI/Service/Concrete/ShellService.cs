@@ -6,7 +6,7 @@ using WPF.UI.View;
 
 namespace WPF.UI
 {
-    public class ShellService:UIServiceBase
+    public class ShellService:ServiceBase
     {
         [Require]
         protected ShellContainer _shell;
